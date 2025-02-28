@@ -1,0 +1,57 @@
+---
+const galleryImages = [
+  {
+    src: "https://images.unsplash.com/photo-1519699047748-de8e457a634e?q=80&w=2080&auto=format&fit=crop",
+    alt: "Antes y después de micropigmentación de cejas"
+  },
+  {
+    src: "https://images.unsplash.com/photo-1526045478516-99145907023c?q=80&w=2070&auto=format&fit=crop",
+    alt: "Cejas de aspecto natural"
+  },
+  {
+    src: "https://images.unsplash.com/photo-1588006173527-0fd5c9f3c4c1?q=80&w=1974&auto=format&fit=crop",
+    alt: "Tratamiento de labios efecto gloss"
+  },
+  {
+    src: "https://images.unsplash.com/photo-1600334129128-685c5582fd35?q=80&w=2070&auto=format&fit=crop",
+    alt: "Proceso de micropigmentación de cejas"
+  },
+  {
+    src: "https://images.unsplash.com/photo-1596704017254-9b121068fb31?q=80&w=1974&auto=format&fit=crop",
+    alt: "Primer plano de cejas terminadas"
+  },
+  {
+    src: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=1976&auto=format&fit=crop",
+    alt: "Resultado de microshading"
+  }
+];
+---
+
+<section id="gallery" class="py-20">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-serif font-bold text-dark mb-4">Nuestro Trabajo</h2>
+      <p class="text-lg text-dark/70 max-w-2xl mx-auto">
+        Explora nuestra galería de clientes reales y observa los hermosos resultados de nuestros servicios de micropigmentación
+      </p>
+    </div>
+    
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      {galleryImages.map(image => (
+        <div class="overflow-hidden rounded-lg shadow-md hover:shadow-lg transition-all group">
+          <img 
+            src={image.src} 
+            alt={image.alt} 
+            class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500"
+          />
+        </div>
+      ))}
+    </div>
+    
+    <div class="mt-12 text-center">
+      <a href="#contact" class="inline-block bg-accent hover:bg-accent/90 text-white py-3 px-8 rounded-full transition-colors font-medium">
+        Reserva Tu Transformación
+      </a>
+    </div>
+  </div>
+</section>

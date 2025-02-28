@@ -1,0 +1,55 @@
+---
+const steps = [
+  {
+    number: "01",
+    title: "Consulta",
+    description: "Comenzamos con una consulta detallada para entender el look deseado y evaluar tus rasgos."
+  },
+  {
+    number: "02",
+    title: "Diseño",
+    description: "Nuestros técnicos crean un diseño personalizado que complementa tus rasgos naturales y se ajusta a tus preferencias."
+  },
+  {
+    number: "03",
+    title: "Tratamiento",
+    description: "Utilizando equipos de última generación y pigmentos premium, realizamos el procedimiento de micropigmentación."
+  },
+  {
+    number: "04",
+    title: "Cuidados Posteriores",
+    description: "Proporcionamos instrucciones completas de cuidados posteriores para garantizar una curación óptima y resultados duraderos."
+  }
+];
+---
+
+<section class="py-20 bg-primary/10">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-serif font-bold text-dark mb-4">Nuestro Proceso</h2>
+      <p class="text-lg text-dark/70 max-w-2xl mx-auto">
+        Desde la consulta hasta los cuidados posteriores, garantizamos una experiencia fluida y cómoda
+      </p>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {steps.map(step => (
+        <div class="bg-white p-6 rounded-lg shadow-md relative overflow-hidden group hover:shadow-lg transition-shadow">
+          <div class="absolute -top-4 -left-4 text-6xl font-serif font-bold text-primary/20 group-hover:text-primary/30 transition-colors">
+            {step.number}
+          </div>
+          <div class="relative z-10">
+            <h3 class="text-xl font-serif font-semibold text-dark mb-3">{step.title}</h3>
+            <p class="text-dark/70">{step.description}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+    
+    <div class="mt-16 text-center">
+      <a href="#contact" class="inline-block bg-accent hover:bg-accent/90 text-white py-3 px-8 rounded-full transition-colors font-medium">
+        Programa Tu Consulta
+      </a>
+    </div>
+  </div>
+</section>
